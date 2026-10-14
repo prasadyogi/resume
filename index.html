@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prasad Yegireddi – Resume</title>
+<meta name="description" content="Prasad Yegireddi — Team Lead · Frappe / ERPNext Backend Engineer. 7 years building enterprise platforms in Python.">
+<meta property="og:title" content="Prasad Yegireddi – Frappe / ERPNext Backend Engineer">
+<meta property="og:description" content="Team Lead at caratRED Technologies. 7 years of Frappe, ERPNext and Python. Featured on Frappe Built Talks.">
+<meta property="og:image" content="photo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0f172a; --blue: #1d4ed8; --blue-bg: #eff6ff; --blue-line: #bfdbfe;
+    --slate: #334155; --muted: #64748b; --border: #e2e8f0; --page: #e8edf3; --card: #ffffff;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', system-ui, sans-serif; background: var(--page); color: var(--navy); line-height: 1.6; padding: 32px 16px; }
+  a { color: var(--blue); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .actions { max-width: 900px; margin: 0 auto 16px; display: flex; justify-content: flex-end; gap: 10px; flex-wrap: wrap; }
+  .btn { display: inline-block; padding: 9px 18px; border-radius: 8px; font-size: 14px; font-weight: 600; border: 1px solid var(--blue); cursor: pointer; font-family: inherit; }
+  .btn.primary { background: var(--blue); color: #fff; }
+  .btn.ghost { background: var(--card); color: var(--blue); }
+  .btn:hover { text-decoration: none; filter: brightness(.95); }
+
+  .resume { max-width: 900px; margin: 0 auto; background: var(--card); border-radius: 14px; box-shadow: 0 16px 48px rgba(15,23,42,.12); overflow: hidden; }
+
+  header { display: flex; gap: 28px; align-items: center; padding: 36px 44px 28px; border-bottom: 1px solid var(--border); }
+  .photo { width: 132px; height: 132px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 4px solid var(--blue-bg); box-shadow: 0 0 0 1px var(--blue-line); }
+  h1 { font-size: 38px; font-weight: 800; letter-spacing: -.5px; line-height: 1.1; }
+  .headline { color: var(--blue); font-size: 17px; font-weight: 500; margin-top: 6px; }
+  .contact { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14px; color: var(--slate); }
+  .contact span.lbl { color: var(--muted); }
+
+  main { padding: 8px 44px 40px; }
+  section { margin-top: 26px; }
+  h2 { font-size: 13px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--blue); padding-bottom: 6px; border-bottom: 2px solid var(--blue-bg); margin-bottom: 12px; }
+
+  .summary { border-left: 4px solid var(--blue); background: var(--blue-bg); padding: 14px 18px; border-radius: 0 8px 8px 0; color: var(--slate); font-size: 15px; }
+
+  .job { margin-bottom: 18px; }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 4px 16px; }
+  .job-title { font-size: 17px; font-weight: 700; }
+  .job-title .co { color: var(--blue); font-weight: 600; font-size: 15px; }
+  .dates { font-size: 13px; color: var(--muted); font-style: italic; }
+  ul { padding-left: 20px; margin-top: 6px; }
+  li { font-size: 14.5px; color: var(--slate); margin: 4px 0; }
+  li::marker { color: var(--blue); }
+  b { color: var(--navy); font-weight: 600; }
+
+  .projects { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .project { border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; }
+  .project h3 { font-size: 15px; font-weight: 700; }
+  .project p { font-size: 14px; color: var(--slate); margin-top: 4px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+  .tag { font-size: 12px; font-weight: 600; color: var(--blue); background: var(--blue-bg); border: 1px solid var(--blue-line); border-radius: 20px; padding: 2px 10px; }
+
+  .skills { display: grid; grid-template-columns: max-content 1fr; gap: 6px 16px; font-size: 14.5px; }
+  .skills dt { font-weight: 700; }
+  .skills dd { color: var(--slate); }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; }
+  .edu h3 { font-size: 15px; font-weight: 700; margin-top: 4px; }
+  .edu p { font-size: 14px; color: var(--muted); margin-bottom: 10px; }
+
+  @media (max-width: 700px) {
+    body { padding: 16px 0; }
+    .actions { padding: 0 16px; justify-content: stretch; }
+    .actions .btn { flex: 1; text-align: center; }
+    .resume { border-radius: 0; }
+    header { flex-direction: column; text-align: center; padding: 28px 16px 22px; }
+    .contact { justify-content: center; }
+    h1 { font-size: 30px; }
+    main { padding: 4px 16px 28px; }
+    .projects, .two-col { grid-template-columns: 1fr; }
+    .skills { grid-template-columns: 1fr; gap: 0; }
+    .skills dd { margin-bottom: 8px; }
+  }
+
+  @media print {
+    @page { size: A4; margin: 12mm; }
+    body { background: #fff; padding: 0; }
+    .actions { display: none; }
+    .resume { box-shadow: none; border-radius: 0; max-width: none; }
+    header, main { padding-left: 0; padding-right: 0; }
+    .project, .job { break-inside: avoid; }
+    h2 { break-after: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="actions">
+  <a class="btn primary" href="Prasad_Yegireddi_Resume.pdf" download>Download PDF</a>
+  <button class="btn ghost" type="button" onclick="window.print()">Print</button>
+</div>
+
+<article class="resume">
+  <header>
+    <img class="photo" src="photo.jpg" alt="Photo of Prasad Yegireddi" width="132" height="132">
+    <div>
+      <h1>Prasad Yegireddi</h1>
+      <div class="headline">Team Lead · Frappe / ERPNext Backend Engineer</div>
+      <div class="contact">
+        <a href="mailto:prasad.vegireddi@gmail.com">prasad.vegireddi@gmail.com</a>
+        <a href="tel:+919000644551">+91 9000644551</a>
+        <span>Telangana, India</span>
+        <a href="https://www.linkedin.com/in/prasad-yegireddi">linkedin.com/in/prasad-yegireddi</a>
+        <span><span class="lbl">GitHub:</span> <a href="https://github.com/pythona620">pythona620</a> (personal) · <a href="https://github.com/prasadyogi">prasadyogi</a> (work)</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Summary</h2>
+      <p class="summary">Frappe / ERPNext backend engineer with 7 years of Python experience building enterprise platforms — multi-tenant Frappe hosting, payment-gateway and biometric-hardware integrations, and government attendance systems serving ~1 lakh employees. Featured speaker on the official Frappe Built Talks series. Currently leading a team of 10 engineers at caratRED Technologies.</p>
+    </section>
+
+    <section>
+      <h2>Professional Experience</h2>
+      <div class="job">
+        <div class="job-head">
+          <div class="job-title">Team Lead · <span class="co">caratRED Technologies</span></div>
+          <div class="dates">July 2024 – Present · 2 yrs 3 mos</div>
+        </div>
+        <ul>
+          <li>Delivered <b>10+ live enterprise applications</b> on Frappe / ERPNext end-to-end, including HRMS, Helpdesk, ezyForms, and Timesheet platforms.</li>
+          <li>Designed and implemented scalable REST APIs using FastAPI, integrating third-party payment gateways and external services.</li>
+          <li>Established CI/CD workflows, Docker-based containerized deployments, and production support protocols.</li>
+          <li>Lead a <b>team of 10 engineers</b> across ERPNext, Frappe, Python, and Vue.js projects, owning architecture, code quality, and sprint delivery.</li>
+          <li>Mentored junior developers, ran code reviews, and defined the team's technical standards.</li>
+          <li>Introduced AI-assisted development (Claude Code, Cursor, GitHub Copilot) into team workflows for feature delivery, code review, and debugging.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="job-head">
+          <div class="job-title">Software Engineer · <span class="co">RNIT Software &amp; Solutions</span></div>
+          <div class="dates">November 2019 – July 2024 · 4 yrs 9 mos</div>
+        </div>
+        <ul>
+          <li>Built and customized <b>ERPNext modules</b> across HR, CRM, Accounts, Buying &amp; Selling for diverse enterprise clients.</li>
+          <li>Integrated biometric attendance hardware with ERPNext, eliminating manual punch-in processes.</li>
+          <li>Developed facial recognition attendance and monitoring systems (Python, Angular) deployed for the Telangana and Andhra Pradesh state governments.</li>
+          <li>Managed AWS EC2 deployments, Docker containerization, server hardening, and REST API integrations with third-party platforms.</li>
+          <li>Served as primary technical contact for client communications, bug resolution, and feature planning.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Major Projects</h2>
+      <div class="projects">
+        <div class="project">
+          <h3>Internal Frappe Cloud Setup</h3>
+          <p>Architected and deployed an in-house Frappe Cloud equivalent — multi-tenant site provisioning, automated bench management, backup scheduling, and one-click app installations for internal teams.</p>
+          <div class="tags"><span class="tag">Frappe</span><span class="tag">Bench</span><span class="tag">Docker</span><span class="tag">Linux</span><span class="tag">AWS</span></div>
+        </div>
+        <div class="project">
+          <h3>ezyHR</h3>
+          <p>Full-featured HR platform on ERPNext &amp; Frappe — attendance automation, payroll engine, leave workflows, and employee self-service portal.</p>
+          <div class="tags"><span class="tag">ERPNext</span><span class="tag">Frappe</span><span class="tag">Python</span></div>
+        </div>
+        <div class="project">
+          <h3>Govt. Facial Recognition Systems</h3>
+          <p>Real-time employee attendance &amp; monitoring systems for Telangana and Andhra Pradesh government departments, serving ~1 lakh employees.</p>
+          <div class="tags"><span class="tag">Angular</span><span class="tag">Python</span><span class="tag">AWS</span></div>
+        </div>
+        <div class="project">
+          <h3>Guest Room Booking</h3>
+          <p>End-to-end booking system in Frappe v14 with dynamic web forms, Razorpay &amp; Paytm payment gateway integration, and admin dashboards.</p>
+          <div class="tags"><span class="tag">Frappe</span><span class="tag">Razorpay</span><span class="tag">Paytm</span></div>
+        </div>
+        <div class="project">
+          <h3>ezyForms</h3>
+          <p>Dynamic form-builder and data-collection platform with custom workflows, approval chains, and integration with ERPNext backends.</p>
+          <div class="tags"><span class="tag">Frappe</span><span class="tag">Vue.js</span><span class="tag">FastAPI</span></div>
+        </div>
+        <div class="project">
+          <h3>Partial Data Backup from UI — Frappe</h3>
+          <p>UI-driven partial data backup feature in Frappe that lets users selectively export DocType data without full-site dumps. Built with Claude Code (AI-assisted development), taking it from concept to production.</p>
+          <div class="tags"><span class="tag">Frappe</span><span class="tag">Python</span><span class="tag">Claude Code</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Technical Skills</h2>
+      <dl class="skills">
+        <dt>Frappe / ERPNext</dt><dd>Frappe Framework · ERPNext · Bench · DocTypes · Workflows · Print Formats · REST / Whitelisted APIs</dd>
+        <dt>Backend</dt><dd>Python · FastAPI · MariaDB / MySQL · Redis</dd>
+        <dt>Frontend</dt><dd>Vue.js · Angular · TypeScript</dd>
+        <dt>DevOps</dt><dd>Docker · AWS EC2 · Linux · CI/CD · Git</dd>
+        <dt>AI Tooling</dt><dd>Claude Code · Cursor · GitHub Copilot · N8N</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Key Achievements</h2>
+      <ul>
+        <li><b>Featured by the Frappe Team</b> in the official "Frappe Built Talks" series on YouTube, sharing real-world builds and ERPNext implementation insights (<a href="https://www.youtube.com/watch?v=ELcy1dR4YK0">watch the talk</a>).</li>
+        <li><b>10+ live enterprise projects</b> delivered end-to-end across HRMS, Education, Government, and Finance domains.</li>
+        <li>Designed <b>ERPNext customizations</b> across 8+ domains, cutting client onboarding time by streamlining module configuration.</li>
+        <li>Completed <b>OWASP Top 10 Secure Coding</b> certification and introduced security review checkpoints into the team's development workflow.</li>
+        <li>Integrated <b>AI-assisted coding tools</b> (Claude Code, Cursor, GitHub Copilot) into team workflows, speeding up feature delivery and code review turnaround.</li>
+      </ul>
+    </section>
+
+    <div class="two-col">
+      <section>
+        <h2>Certifications</h2>
+        <ul>
+          <li>Managing ERPNext Custom Code via GitHub</li>
+          <li>Secure Coding Based on OWASP Top 10</li>
+          <li>Claude Code Beginner Crash Course</li>
+        </ul>
+      </section>
+      <section class="edu">
+        <h2>Education</h2>
+        <h3>B.Tech — Computer Science &amp; Engineering (Data Science), JNTUH</h3>
+        <p>DRK College of Engineering &amp; Technology</p>
+        <h3>Diploma — Electronics &amp; Communication Engineering</h3>
+        <p>GMR Institute of Technology</p>
+      </section>
+    </div>
+  </main>
+</article>
+
+</body>
+</html>
